@@ -12,18 +12,18 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore oop-s1-1-mvc-78791.sln
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build oop-s1-1-mvc-78791.sln --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test --no-build
+      run: dotnet test oop-s1-1-mvc-78791.sln --no-build --configuration Release
