@@ -19,11 +19,17 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Restore
-      run: dotnet restore oop-s1-1-mvc-78791.sln
+    - name: Restore main project
+      run: dotnet restore "library.mvc/library.mvc.csproj"
 
-    - name: Build
-      run: dotnet build oop-s1-1-mvc-78791.sln --no-restore --configuration Release
+    - name: Restore test project
+      run: dotnet restore "xUnit Test Project/library.mvc.Tests.csproj"
+
+    - name: Build main project
+      run: dotnet build "library.mvc/library.mvc.csproj" --no-restore --configuration Release
+
+    - name: Build test project
+      run: dotnet build "xUnit Test Project/library.mvc.Tests.csproj" --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test oop-s1-1-mvc-78791.sln --no-build --configuration Release
+      run: dotnet test "xUnit Test Project/library.mvc.Tests.csproj" --no-build --configuration Release
