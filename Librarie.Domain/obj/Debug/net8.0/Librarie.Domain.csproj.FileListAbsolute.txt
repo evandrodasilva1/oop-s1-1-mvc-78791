@@ -1,0 +1,11 @@
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\bin\Debug\net8.0\Librarie.Domain.deps.json
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\bin\Debug\net8.0\Librarie.Domain.dll
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\bin\Debug\net8.0\Librarie.Domain.pdb
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.AssemblyInfoInputs.cache
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.AssemblyInfo.cs
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.csproj.CoreCompileInputs.cache
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.dll
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\refint\Librarie.Domain.dll
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\Librarie.Domain.pdb
+C:\Users\evand\source\repos\oop-s1-1-mvc-78791\Librarie.Domain\obj\Debug\net8.0\ref\Librarie.Domain.dll

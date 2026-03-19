@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Librarie.Domain.Loan>
+
+@{
+    ViewData["Title"] = "Loans";
+}
+
+<h1>Loans</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Book
+            </th>
+            <th>
+                Member
+            </th>
+            <th>
+                LoanDate
+            </th>
+            <th>
+                DueDate
+            </th>
+            <th>
+                ReturnedDate
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Book?.Title
+                </td>
+                <td>
+                    @item.Member?.FullName
+                </td>
+                <td>
+                    @item.LoanDate
+                </td>
+                <td>
+                    @item.DueDate
+                </td>
+                <td>
+                    @item.ReturnedDate
+                </td>
+                <td>
+                    @if (item.ReturnedDate == null)
+                    {
+                        if (item.DueDate < DateTime.Now)
+                        {
+                            <span class="text-danger">Overdue</span>
+                        }
+                        else
+                        {
+                            <span class="text-warning">On Loan</span>
+                        }
+                    }
+                    else
+                    {
+                        <span class="text-success">Returned</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    @if (item.ReturnedDate == null)
+                    {
+                        <span> | </span>
+                        <form asp-action="MarkReturned" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="btn btn-sm btn-success">Return</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

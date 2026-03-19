@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Librarie.Domain.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form method="get">
+    <p>
+        Search:
+        <input type="text" name="searchString" />
+
+        Category:
+        <select name="category">
+            <option value="">All</option>
+            <option value="Programming">Programming</option>
+            <option value="Database">Database</option>
+        </select>
+
+        Availability:
+        <select name="available">
+            <option value="">All</option>
+            <option value="true">Available</option>
+            <option value="false">Not Available</option>
+        </select>
+
+        <input type="submit" value="Filter" class="btn btn-primary" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Isbn</th>
+            <th>Category</th>
+            <th>IsAvailable</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.Isbn</td>
+                <td>@item.Category</td>
+                <td>@item.IsAvailable</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

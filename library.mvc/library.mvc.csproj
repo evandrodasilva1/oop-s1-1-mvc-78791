@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>aspnet-library.mvc-e4d83dbb-879e-4312-b873-9e6a62b7d933</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Views\NovaPasta\**" />
+	  <Content Remove="Views\NovaPasta\**" />
+	  <EmbeddedResource Remove="Views\NovaPasta\**" />
+	  <None Remove="Views\NovaPasta\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Librarie.Domain\Librarie.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" Version="35.6.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.20" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.20" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.20" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.23">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.23" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\NovaPasta1\" />
+	</ItemGroup>
+
+</Project>
